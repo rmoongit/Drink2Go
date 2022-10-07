@@ -1,0 +1,77 @@
+.product {
+  position: relative;
+  min-height: 656px;
+  background-color: $flat-white;
+  background-image: url("../img/decaff-mobile.png");
+  background-size: 280px;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-position-y: 20px;
+}
+
+.product__wrapper {
+  padding-top: 310px;
+  text-align: center;
+}
+
+.product__new {
+  font-family: $main-font-bold;
+  display: inline-block;
+  color: $base-purple;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.product__title {
+  @include mobile-title();
+  text-align: center;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.product__text {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.product__order {
+  margin: 0;
+
+  del {
+    color: $base-purple;
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  b {
+    font-size: 20px;
+    font-family: $main-font-bold;
+    line-height: 32px;
+  }
+}
+
+.product__button {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 100%;
+  padding: 0;
+  background-position: center;
+
+  svg {
+    fill: $base-purple;
+  }
+
+  &--left {
+    left: 0;
+    top: 0;
+  }
+
+  &--right {
+    right: 0;
+    top: 0;
+    transform: rotate(180deg);
+  }
+}

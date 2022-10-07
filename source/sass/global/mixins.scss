@@ -1,0 +1,83 @@
+/* Миксины */
+
+
+/* fonts */
+
+@mixin mobile-title() {
+  line-height: 47px;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: $main-font-bold;
+}
+
+@mixin tablet-title() {
+  line-height: 80px;
+  font-size: 56px;
+  font-weight: 700;
+}
+
+@mixin desktop-title() {
+  line-height: 80px;
+  font-size: 56px;
+  font-weight: 700;
+}
+
+/* second title */
+
+@mixin mobile-benefits-title() {
+  line-height: 36px;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: $main-font-bold;
+}
+
+@mixin tablet-benefits-title() {
+  line-height: 47px;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+/* paragraph */
+
+@mixin mobile-text() {
+  line-height: 20px;
+  font-size: 14px;
+}
+
+@mixin tablet-text() {
+  line-height: 32px;
+  font-size: 20px;
+}
+
+/* purify */
+
+@mixin clear-fieldset() {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+@mixin clear-list() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+/* CONTAINER */
+
+@mixin mobile() {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 320px;
+}
+
+@mixin tablet() {
+  max-width: 768px;
+  padding: 0 30px;
+}
+
+@mixin desktop() {
+  max-width: 1440px;
+  padding: 0 40px;
+}

@@ -1,0 +1,55 @@
+.benefit {
+  min-height: 902px;
+  background-color: $white;
+}
+
+.benefit__wrapper {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.benefit__suptitle {
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: $main-font-bold;
+  color: $base-purple;
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 4px;
+}
+
+.benefit__title {
+  @include mobile-benefits-title();
+  margin: 0;
+  margin-bottom: 36px;
+}
+
+.benefit__list {
+  @include clear-list();
+}
+
+.benefit__item {
+  min-height: 142px;
+  margin-bottom: 32px;
+}
+
+.benefit__item:last-child {
+  margin-bottom: 0;
+}
+
+.benefit__item-img {
+  margin-bottom: 10px;
+}
+
+.benefit__item-title {
+  font-family: $main-font-bold;
+  font-size: 18px;
+  line-height: 32px;
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.benefit__item-text {
+margin: 0;
+}

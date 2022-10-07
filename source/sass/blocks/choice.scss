@@ -1,0 +1,44 @@
+.choice {
+  display: flex;
+  flex-direction: column;
+}
+
+.choice__text {
+  display: inline-block;
+  margin-bottom: 22px;
+}
+
+.choice__item {
+  position: relative;
+  margin-bottom: 23px;
+  margin-left: 34px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 24px;
+    border: 2px solid $base-purple;
+    border-radius: 50%;
+    background-color: $white;
+    top: 50%;
+    left: -20px;
+    transform: translate(-50%, -50%);
+  }
+
+  input[type="radio"]:checked + .choice__item-select::after {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $base-purple;
+    top: 50%;
+    left: -20px;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.choice__item:last-child {
+  margin-bottom: 0;
+}
