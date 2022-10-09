@@ -1,0 +1,80 @@
+.select {
+  position: relative;
+  margin: 0 auto;
+}
+
+.select__button {
+  cursor: pointer;
+  display: inline-block;
+  color: $base-purple;
+  font-weight: 600;
+  line-height: 24px;
+  padding: 4px 30px 4px 10px;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: $base-pink;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 87%;
+    top: 45%;
+    width: 10px;
+    height: 6px;
+    background-image: url("../img/icon-select-button.svg");
+    background-position: right;
+  }
+
+  &--active::after {
+    transform: rotate(180deg);
+  }
+}
+
+.select__content {
+  position: absolute;
+  width: 200px;
+  top: 40px;
+  left: 0;
+  background-color: $white;
+  display: none;
+
+  &--open {
+    display: block;
+  }
+
+  .select__list {
+    @include clear-list();
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+.select__item {
+  outline: none;
+  border-bottom: 1px solid $base-pink;
+  padding: 8px 20px;
+  font-size: 16px;
+  line-height: 24px;
+
+  &:hover {
+    background-color: $base-pink;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $base-purple;
+    color: $white;
+  }
+}
+
+.select__item:first-child {
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.select__item:last-child {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}

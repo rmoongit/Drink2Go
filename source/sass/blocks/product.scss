@@ -36,6 +36,8 @@
 
 .product__order {
   margin: 0;
+  display: flex;
+  justify-content: center;
 
   del {
     color: $base-purple;

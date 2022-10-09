@@ -1,0 +1,157 @@
+.footer__wrapper {
+  padding-bottom: 30px;
+}
+
+.footer__nav {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 22px 0 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 1px;
+    background-color: $base-pink;
+    width: 100vw;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    left: 50%;
+  }
+}
+
+.footer__icons {
+  @include clear-list();
+  display: flex;
+}
+
+.footer__link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  width: 40px;
+  height: 40px;
+
+  svg {
+    fill: $grey;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $base-pink;
+  }
+
+  &:active {
+    background-color: $pink-opacity;
+  }
+
+  &:hover > svg {
+    fill: $base-purple;
+  }
+}
+
+.footer__suptitle {
+  display: inline-block;
+  font-family: $main-font-bold;
+  color: $base-purple;
+}
+
+.footer__list {
+  @include clear-list();
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 1px;
+    background-color: $base-pink;
+    width: 100vw;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    left: 50%;
+  }
+}
+
+.footer__item {
+  position: relative;
+  margin-bottom: 20px;
+
+  .footer__item-logo {
+    margin-right: 6px;
+  }
+}
+
+.footer__item:last-child {
+  margin-bottom: 0;
+}
+
+.footer__link {
+  color: $black;
+  text-decoration: none;
+  font-family: $main-font-medium;
+  margin-bottom: 20px;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: $purple-lighter;
+  }
+
+  &:active {
+    color: $purple-darker;
+  }
+}
+
+.footer__develop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  column-gap: 5px;
+}
+
+.footer__develop-text {
+  font-size: 12px;
+  line-height: 16px;
+  color: $grey;
+}
+
+.footer__develop-link {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 16px;
+  column-gap: 5px;
+  text-decoration: none;
+  color: $grey;
+
+  svg {
+    fill: $grey;
+  }
+
+  &:hover,
+  &:focus {
+    color: $base-purple;
+  }
+
+  &:hover > svg,
+  &:focus > svg {
+    fill: $base-purple;
+  }
+
+  &:active {
+    color: $purple-darker;
+  }
+
+  &:active > svg {
+    fill: $purple-darker;
+  }
+}

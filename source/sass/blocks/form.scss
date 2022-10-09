@@ -2,6 +2,7 @@
   text-align: start;
   font-size: 16px;
   line-height: 24px;
+  margin-bottom: 40px;
 }
 
 .form__range {
@@ -74,5 +75,50 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
+  }
+}
+
+.form__buttons {
+  text-align: center;
+}
+
+.form__button {
+  border: none;
+  font-size: 14px;
+  line-height: 24px;
+  color: $white;
+  font-family: $main-font;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 160px;
+  height: 45px;
+
+  &--submit {
+    background-color: $base-purple;
+    margin-bottom: 24px;
+
+    &:hover,
+    &:focus {
+      background-color: $purple-lighter;
+    }
+
+    &:active {
+      background-color: $base-purple;
+    }
+  }
+
+  &--reset {
+    background-color: $white;
+    color: $base-purple;
+
+    &:hover,
+    &:focus {
+      background-color: $purple-lighter;
+      color: $white;
+    }
+
+    &:active {
+      background-color: $base-purple;
+    }
   }
 }

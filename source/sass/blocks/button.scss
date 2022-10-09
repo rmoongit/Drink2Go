@@ -1,4 +1,7 @@
 .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   background-color: $base-purple;
   font-size: 14px;
@@ -14,5 +17,14 @@
     width: 113px;
     height: 40px;
     margin-left: 20px;
+
+    &:hover,
+    &:focus {
+      background-color: $purple-lighter;
+    }
+
+    &:active {
+      background-color: $purple-darker;
+    }
   }
 }

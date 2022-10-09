@@ -1,0 +1,64 @@
+.filter__suptitle {
+  display: inline-block;
+  margin-bottom: 22px;
+  font-weight: 600;
+}
+
+.filter__item {
+  position: relative;
+  margin-bottom: 23px;
+  margin-left: 44px;
+
+  .filter__item-select::before {
+    content: "";
+    position: absolute;
+    width: 42px;
+    height: 24px;
+    background-color: $grey;
+    border-radius: 12px;
+    top: 50%;
+    left: -30px;
+    transform: translate(-50%, -50%);
+  }
+
+  .filter__item-select::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $white;
+    top: 50%;
+    left: -40px;
+    transform: translate(-50%, -50%);
+  }
+
+  input[type="checkbox"]:hover + .filter__item-select::before {
+    border: 2px solid $base-purple;
+    background-color: $base-pink;
+  }
+
+  input[type="checkbox"]:checked + .filter__item-select::after {
+    left: -20px;
+  }
+
+  input[type="checkbox"]:checked + .filter__item-select::after {
+    left: -20px;
+  }
+
+  input[type="checkbox"]:checked + .filter__item-select::before {
+    background-color: $base-purple;
+  }
+
+  input[type="checkbox"]:disabled + .filter__item-select::before {
+    background-color: $light-grey;
+  }
+
+  input[type="checkbox"]:disabled + .filter__item-select {
+    color: $grey;
+  }
+}
+
+.filter__item:last-child {
+  margin-bottom: 0;
+}

@@ -1,0 +1,117 @@
+
+.cards {
+  padding-bottom: 44px;
+}
+
+.cards__list {
+  @include clear-list();
+
+  margin-bottom: 40px;
+}
+
+.cards__item {
+  border-radius: 4px;
+  background-color: $white;
+  min-height: 420px;
+  padding: 40px 20px 20px;
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.cards__img {
+  margin-bottom: 24px;
+}
+
+.cards__sort-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cards__suptitle {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.cards__title {
+  text-align: start;
+  font-family: $main-font-bold;
+  font-size: 18px;
+  line-height: 32px;
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.cards__text {
+  padding-right: 5px;
+  text-align: start;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.cards__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+
+  span {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 600;
+  }
+}
+
+.cards__button {
+  &:hover,
+  &:focus {
+    background-color: $purple-lighter;
+  }
+
+  &:active {
+    background-color: $purple-darker;
+  }
+}
+
+.cards__pagination {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards__button-numb {
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: $white;
+  color: $base-purple;
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+  width: 40px;
+  height: 40px;
+
+  &--active {
+    background-color: transparent;
+    color: $black;
+    font-weight: 600;
+  }
+
+  &:active {
+    background-color: $base-purple;
+    color: $white;
+  }
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: $purple-lighter;
+  }
+}
+
+.cards__icon {
+  fill: $white;
+  margin-right: 6px;
+}

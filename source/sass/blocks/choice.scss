@@ -1,11 +1,13 @@
 .choice {
   display: flex;
   flex-direction: column;
+  margin-bottom: 24px;
 }
 
-.choice__text {
+.choice__suptitle {
   display: inline-block;
   margin-bottom: 22px;
+  font-weight: 600;
 }
 
 .choice__item {
@@ -13,12 +15,12 @@
   margin-bottom: 23px;
   margin-left: 34px;
 
-  &::before {
+  .choice__item-select::before {
     position: absolute;
     content: "";
     width: 24px;
     height: 24px;
-    border: 2px solid $base-purple;
+    border: 2px solid $grey;
     border-radius: 50%;
     background-color: $white;
     top: 50%;
@@ -36,6 +38,28 @@
     top: 50%;
     left: -20px;
     transform: translate(-50%, -50%);
+  }
+
+  input[type="radio"]:hover + .choice__item-select::before {
+    background-color: $base-pink;
+  }
+
+  input[type="radio"]:hover + .choice__item-select::before {
+    border-color: $base-purple;
+  }
+
+  input[type="radio"]:checked + .choice__item-select::before {
+    border: 2px solid $base-purple;
+  }
+
+  input[type="radio"]:disabled + .choice__item-select::before {
+    background-color: transparent;
+    border: solid 2px $light-grey;
+    color: $light-grey;
+  }
+
+  input[type="radio"]:disabled + .choice__item-select {
+    color: $grey;
   }
 }
 
