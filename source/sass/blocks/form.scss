@@ -2,7 +2,21 @@
   text-align: start;
   font-size: 16px;
   line-height: 24px;
+  margin: 0;
   margin-bottom: 40px;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 22px;
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 318px;
+    grid-template-rows: repeat(3, min-content);
+    min-height: 714px;
+  }
 }
 
 .form__range {
@@ -22,6 +36,10 @@
   height: 2px;
   background-color: $light-grey;
 
+  @media (min-width: $tablet) {
+    width: 220px;
+  }
+
   &::after,
   &::before {
     position: absolute;
@@ -35,7 +53,7 @@
   }
 
   &--min::before {
-    left: 0;
+    left: 10px;
   }
 
   &--max::after {
@@ -75,11 +93,23 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
+
+    @media (min-width: $tablet) {
+      width: 92px;
+    }
   }
 }
 
 .form__buttons {
   text-align: center;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    column-gap: 30px;
+    grid-column: 1/-1;
+    justify-self: center;
+    margin-bottom: 30px;
+  }
 }
 
 .form__button {
@@ -104,6 +134,10 @@
 
     &:active {
       background-color: $base-purple;
+    }
+
+    @media (min-width: $tablet) {
+      margin-bottom: 0;
     }
   }
 

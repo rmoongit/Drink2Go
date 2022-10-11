@@ -7,11 +7,43 @@
   background-repeat: no-repeat;
   background-position: top;
   background-position-y: 20px;
+
+  @media (min-width: $tablet) {
+    background: linear-gradient(180deg, $flat-white 70%, rgba(255, 255, 255, 1) 70%);
+  }
+
+  @media (min-width: $desktop) {
+    background: $flat-white;
+  }
 }
 
 .product__wrapper {
   padding-top: 310px;
   text-align: center;
+
+  @media (min-width: $tablet) {
+    padding-top: 60px;
+    background-image: url("../img/decaff-tablet.png");
+    background-repeat: no-repeat;
+    background-size: 476px;
+    background-position: center;
+    background-position-y: 285px;
+    min-height: 828px;
+  }
+
+  @media (min-width: $desktop) {
+    display: grid;
+    padding-top: 180px;
+    grid-template-columns: 1fr 625px;
+    grid-template-rows: repeat(4, max-content);
+    justify-items: start;
+    min-height: 714px;
+    background-image: url("../img/decaff-desktop.png");
+    background-size: 600px;
+    background-position: left;
+    background-position-y: 20px;
+    background-position-x: 100px;
+  }
 }
 
 .product__new {
@@ -20,6 +52,10 @@
   color: $base-purple;
   text-transform: uppercase;
   margin-bottom: 4px;
+
+  @media (min-width: $desktop) {
+    grid-column: 2;
+  }
 }
 
 .product__title {
@@ -27,11 +63,31 @@
   text-align: center;
   margin: 0;
   margin-bottom: 10px;
+
+  @media (min-width: $tablet) {
+    @include tablet-title();
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 2;
+  }
 }
 
 .product__text {
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 20px;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    @include tablet-text();
+    width: 608px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 2;
+    text-align: start;
+    padding-right: 20px;
+  }
 }
 
 .product__order {
@@ -50,6 +106,11 @@
     font-family: $main-font-bold;
     line-height: 32px;
   }
+
+  @media (min-width: $desktop) {
+    grid-column: 2;
+    margin-bottom: 158px;
+  }
 }
 
 .product__button {
@@ -61,6 +122,16 @@
   height: 100%;
   padding: 0;
   background-position: center;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $white;
+  }
+
+  &:active {
+    background: $button-slider-gradient;
+  }
 
   svg {
     fill: $base-purple;
@@ -75,5 +146,44 @@
     right: 0;
     top: 0;
     transform: rotate(180deg);
+  }
+
+  @media (min-width: $tablet) {
+    height: 70%;
+    width: 80px;
+  }
+
+  @media (min-width: $desktop) {
+    height: 100%;
+    width: 80px;
+  }
+}
+
+.product__down-buttons {
+  display: none;
+
+  @media (min-width: $desktop) {
+    grid-column: 2;
+    display: block;
+  }
+
+  .product__down-button {
+    cursor: pointer;
+
+    @media (min-width: $desktop) {
+      border: none;
+      background-color: $white;
+      height: 4px;
+      width: 62px;
+
+      &--active {
+        background-color: $base-purple;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $base-pink;
+      }
+    }
   }
 }

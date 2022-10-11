@@ -2,7 +2,6 @@
   position: relative;
   min-height: 60px;
   background-color: $white;
-  color: #ffffff;
 }
 
 .header__nav {
@@ -16,10 +15,37 @@
   &--closed {
     display: none;
   }
+
+  @media (min-width: $tablet) {
+    display: block;
+    position: static;
+  }
 }
 
 .header__logo {
   margin-right: auto;
+}
+
+.header__promo-text {
+  margin: 0;
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 12px;
+    left: 16px;
+  }
+}
+
+.header__img {
+  @media (min-width: $tablet) {
+    width: 82px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 170px;
+  }
 }
 
 .header__wrapper {
@@ -32,9 +58,23 @@
   @include clear-list();
   text-align: center;
 
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    height: 80px;
+    min-width: 400px;
+    align-items: center;
+    justify-content: center;
+  }
+
   .header__item {
-    padding: 20px 0;
     border: 1px solid $lavander-latte;
+    padding: 20px 50px;
+
+    @media (min-width: $tablet) {
+      border: none;
+      padding: 32px 20px;
+    }
 
     a {
       text-decoration: none;
@@ -43,13 +83,56 @@
       font-weight: 700;
       font-size: 12px;
       line-height: 16px;
-      padding: 20px 50px;
+
+      &:hover {
+        color: $base-purple;
+      }
     }
   }
 }
 
 .header__link {
   padding: 22px;
+  text-decoration: none;
+
+  @media (min-width: $tablet) {
+    padding: 32px 20px;
+  }
+
+  @media (min-width: $desktop) {
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    fill: $black;
+  }
+
+  &:hover {
+    background-color: $base-pink;
+  }
+
+  &:hover > svg {
+    fill: $base-purple;
+  }
+
+  &:hover > .header__link-text {
+    color: $base-purple;
+  }
+
+  .header__user-text,
+  .header__cart-text {
+    display: none;
+
+    @media (min-width: $desktop) {
+      display: inline-block;
+      margin-left: 8px;
+      text-transform: uppercase;
+      font-size: 12px;
+      line-height: 16px;
+      color: $black;
+    }
+  }
 }
 
 .header__button {
@@ -61,6 +144,10 @@
   border: none;
   cursor: pointer;
   padding: 0;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
 
   &--open {
     &::after {

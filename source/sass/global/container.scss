@@ -1,3 +1,11 @@
 .container {
   @include mobile();
+
+  @media (min-width: $tablet) {
+    @include tablet();
+  }
+
+  @media (min-width: $desktop) {
+    @include desktop();
+  }
 }
