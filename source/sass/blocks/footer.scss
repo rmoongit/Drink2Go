@@ -1,5 +1,18 @@
 .footer__wrapper {
   padding-bottom: 30px;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: repeat(3, 223px);
+    grid-template-rows: min-content auto;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(4, 318px);
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
 }
 
 .footer__nav {
@@ -10,6 +23,18 @@
   align-items: center;
   justify-content: space-between;
 
+  @media (min-width: $tablet) {
+    grid-column: 1/-1;
+    margin-bottom: 0;
+    padding: 42px 0 32px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 1;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -19,12 +44,32 @@
     bottom: 0;
     transform: translate(-50%, -50%);
     left: 50%;
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
+  }
+}
+
+.footer__img {
+  @media (min-width: $tablet) {
+    width: 170px;
+  }
+}
+
+.footer__promo-text {
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: inline-block;
+    margin-bottom: 50px;
   }
 }
 
 .footer__icons {
   @include clear-list();
   display: flex;
+  flex-wrap: wrap;
 }
 
 .footer__link-icon {
@@ -66,6 +111,10 @@
   padding-bottom: 20px;
   margin-bottom: 20px;
 
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -75,12 +124,26 @@
     bottom: 0;
     transform: translate(-50%, -50%);
     left: 50%;
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
   }
 }
 
 .footer__item {
   position: relative;
   margin-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    &--pin {
+      padding-right: 15px;
+    }
+
+    br {
+      display: none;
+    }
+  }
 
   .footer__item-logo {
     margin-right: 6px;
@@ -112,10 +175,15 @@
 
 .footer__develop {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin: 0;
   column-gap: 5px;
+
+  @media (min-width: $tablet) {
+    grid-column: 1/-1;
+  }
 }
 
 .footer__develop-text {

@@ -7,8 +7,9 @@
   display: inline-block;
   color: $base-purple;
   font-weight: 600;
+  font-size: 16px;
   line-height: 24px;
-  padding: 4px 30px 4px 10px;
+  padding: 4px 19px 4px 0;
   border-radius: 4px;
 
   &:hover {
@@ -18,7 +19,7 @@
   &::after {
     content: "";
     position: absolute;
-    left: 87%;
+    left: 90%;
     top: 45%;
     width: 10px;
     height: 6px;

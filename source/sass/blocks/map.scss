@@ -1,4 +1,16 @@
 .map {
   margin: 0 auto;
-  width: 320px;
+  min-width: 320px;
+
+  @media (min-width: $tablet) {
+    min-height: 480px;
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 540px;
+  }
+}
+
+.map__img {
+  width: 100%;
 }

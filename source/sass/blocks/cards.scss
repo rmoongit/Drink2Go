@@ -1,5 +1,13 @@
 .cards {
   padding-bottom: 44px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 90px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 120px;
+  }
 }
 
 .cards__list {
@@ -58,6 +66,7 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
+  margin-right: 8px;
 }
 
 .cards__title {
@@ -67,6 +76,10 @@
   line-height: 32px;
   margin: 0;
   margin-bottom: 4px;
+
+  @media (min-width: $tablet) {
+    @include mobile-benefits-title();
+  }
 }
 
 .cards__text {

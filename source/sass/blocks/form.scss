@@ -14,8 +14,9 @@
 
   @media (min-width: $desktop) {
     grid-template-columns: 318px;
-    grid-template-rows: repeat(3, min-content);
+    grid-template-rows: repeat(4, min-content);
     min-height: 714px;
+    margin-bottom: 0;
   }
 }
 
@@ -27,6 +28,10 @@
   display: inline-block;
   margin-bottom: 22px;
   font-weight: 600;
+
+  @media (min-width: $desktop) {
+    margin-bottom: 30px;
+  }
 }
 
 .form__scale {
@@ -38,6 +43,10 @@
 
   @media (min-width: $tablet) {
     width: 220px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 100%;
   }
 
   &::after,
@@ -105,10 +114,16 @@
 
   @media (min-width: $tablet) {
     display: flex;
+    flex-wrap: wrap;
     column-gap: 30px;
+    row-gap: 10px;
     grid-column: 1/-1;
-    justify-self: center;
+    justify-content: center;
     margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    flex-wrap: nowrap;
   }
 }
 

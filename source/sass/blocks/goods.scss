@@ -37,6 +37,7 @@
   margin-bottom: 20px;
 
   @media (min-width: $desktop) {
+    @include tablet-benefits-title();
     grid-column: 2/-1;
   }
 }

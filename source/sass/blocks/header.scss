@@ -5,15 +5,16 @@
 }
 
 .header__nav {
+  display: none;
   position: absolute;
-  top: 65px;
+  top: 60px;
   left: 0;
   background-color: $white;
   width: 100%;
   z-index: 3;
 
-  &--closed {
-    display: none;
+  &--open {
+    display: block;
   }
 
   @media (min-width: $tablet) {
@@ -61,7 +62,7 @@
   @media (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
-    height: 80px;
+    min-height: 80px;
     min-width: 400px;
     align-items: center;
     justify-content: center;
@@ -92,16 +93,20 @@
 }
 
 .header__link {
+  width: 60px;
+  height: 60px;
   padding: 22px;
   text-decoration: none;
 
   @media (min-width: $tablet) {
-    padding: 32px 20px;
+    padding: 30px 20px;
+    height: 80px;
   }
 
   @media (min-width: $desktop) {
     display: flex;
     align-items: center;
+    width: 129px;
   }
 
   svg {
@@ -145,20 +150,27 @@
   cursor: pointer;
   padding: 0;
 
+  &:hover,
+  &:focus {
+    background-color: $base-pink;
+  }
+
   @media (min-width: $tablet) {
     display: none;
   }
 
-  &--open {
-    &::after {
-      content: "";
-      position: absolute;
-      transform: translate(-50%, -50%);
-      width: 16px;
-      height: 16px;
-      background-image: url("../img/burger.svg");
-      background-position: center;
-      background-repeat: no-repeat;
-    }
+  &::after {
+    content: "";
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/burger.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--open::after {
+    background-image: url("../img/burger-open.svg");
   }
 }

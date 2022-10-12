@@ -1,48 +1,88 @@
 .product {
   position: relative;
   min-height: 656px;
-  background-color: $flat-white;
-  background-image: url("../img/decaff-mobile.png");
-  background-size: 280px;
-  background-repeat: no-repeat;
-  background-position: top;
-  background-position-y: 20px;
-
-  @media (min-width: $tablet) {
-    background: linear-gradient(180deg, $flat-white 70%, rgba(255, 255, 255, 1) 70%);
-  }
+  background-color: $white;
 
   @media (min-width: $desktop) {
     background: $flat-white;
   }
 }
 
-.product__wrapper {
-  padding-top: 310px;
-  text-align: center;
+.product__item {
+  display: grid;
+  min-height: 670px;
+  justify-content: center;
+  background-color: $flat-white;
+  padding: 20px 20px 60px;
+
+  &--two {
+    background-color: $lavander-latte;
+  }
+
+  &--three {
+    background-color: $espresso;
+  }
 
   @media (min-width: $tablet) {
-    padding-top: 60px;
-    background-image: url("../img/decaff-tablet.png");
-    background-repeat: no-repeat;
-    background-size: 476px;
-    background-position: center;
-    background-position-y: 285px;
+    padding: 60px 20px 0;
     min-height: 828px;
+    background: linear-gradient(180deg, $flat-white 70%, $white 70%);
+
+    &--two {
+      background: linear-gradient(180deg, $lavander-latte 70%, $white 70%);
+    }
+
+    &--three {
+      background: linear-gradient(180deg, $espresso 70%, $white 70%);
+    }
   }
 
   @media (min-width: $desktop) {
-    display: grid;
-    padding-top: 180px;
-    grid-template-columns: 1fr 625px;
-    grid-template-rows: repeat(4, max-content);
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+    background: linear-gradient(180deg, $flat-white 100%, $white 0%);
+
+    &--two {
+      background: linear-gradient(180deg, $lavander-latte 100%, $white 0%);
+    }
+
+    &--three {
+      background: linear-gradient(180deg, $espresso 100%, $white 0%);
+    }
+  }
+}
+
+.product__picture {
+  @media (min-width: $tablet) {
+    grid-row: 2;
+    justify-self: center;
+  }
+}
+
+.product__img {
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet) {
+    width: 476px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 600px;
+  }
+}
+
+.product__content {
+  display: grid;
+  justify-items: center;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-rows: repeat(4, min-content);
     justify-items: start;
-    min-height: 714px;
-    background-image: url("../img/decaff-desktop.png");
-    background-size: 600px;
-    background-position: left;
-    background-position-y: 20px;
-    background-position-x: 100px;
   }
 }
 
@@ -54,7 +94,8 @@
   margin-bottom: 4px;
 
   @media (min-width: $desktop) {
-    grid-column: 2;
+    grid-column: 2/2;
+    grid-row: 1;
   }
 }
 
@@ -69,7 +110,8 @@
   }
 
   @media (min-width: $desktop) {
-    grid-column: 2;
+    grid-row: 2;
+    grid-column: 2/2;
   }
 }
 
@@ -86,13 +128,15 @@
   @media (min-width: $desktop) {
     grid-column: 2;
     text-align: start;
-    padding-right: 20px;
+    margin-bottom: 40px;
   }
 }
 
 .product__order {
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
   justify-content: center;
 
   del {
@@ -114,15 +158,17 @@
 }
 
 .product__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   border: none;
   background-color: transparent;
-  background-repeat: no-repeat;
   width: 20px;
   height: 100%;
   padding: 0;
-  background-position: center;
   cursor: pointer;
+  z-index: 50;
 
   &:hover,
   &:focus {
@@ -149,7 +195,6 @@
   }
 
   @media (min-width: $tablet) {
-    height: 70%;
     width: 80px;
   }
 
@@ -163,8 +208,8 @@
   display: none;
 
   @media (min-width: $desktop) {
-    grid-column: 2;
     display: block;
+    margin-bottom: 60px;
   }
 
   .product__down-button {

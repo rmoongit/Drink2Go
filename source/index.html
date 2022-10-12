@@ -9,6 +9,7 @@
   <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 
 <body class="page__body">
@@ -27,7 +28,7 @@
       <p class="header__promo-text">Интернет-магазин
         кофейных напитков</p>
 
-      <nav class="header__nav header__nav--closed">
+      <nav class="no-js no-js--nav header__nav">
         <ul class="header__list">
 
           <li class="header__item">
@@ -58,7 +59,7 @@
         <span class="header__cart-text">Корзина</span>
       </a>
 
-      <button class="header__button header__button--closed header__button--open">
+      <button class="no-js no-js--button header__button">
         <span class="visually-hidden">Кнопка главного меню</span>
       </button>
 
@@ -69,45 +70,115 @@
 
     <section class="product">
       <span class="visually-hidden">Главная страница с заказом</span>
-      <div class="product__wrapper container">
-        <button class="product__button product__button--left"><svg width="11" height="20" aria-label="Кнопка следующий">
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide product__item">
+            <picture class="product__picture">
+              <source type="image/webp" media="(min-width: 1440px)"
+                srcset="img/decaff-desktop.webp 1x, img/decaff-desktop.webp@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/decaff-tablet.webp 1x, img/decaff-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/decaff-mobile.webp 1x, img/decaff-mobile@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="img/decaff-desktop.png 1x, img/decaff-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/decaff-tablet.png 1x, img/decaff-tablet@2x.png 2x">
+              <img class="product__img" src="img/decaff-mobile.png" srcset="img/decaff-mobile@2x.png 2x" loading="lazy"
+                width="280" height="280" alt="Флэтт Уайт">
+            </picture>
+            <div class="product__content">
+              <span class="product__new">новинка!</span>
+              <h1 class="product__title">Декаф Флэт Уайт</h1>
+              <p class="product__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком —
+                то, что
+                нужно для расслабления после тяжёлого рабочего дня</p>
+              <p class="product__order">
+                <span>
+                  <del>295₽</del>
+                  <b>225₽</b>
+                </span>
+                <button class="button button--order">
+                  Заказать</button>
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide product__item product__item--two">
+            <picture class="product__picture">
+              <source type="image/webp" media="(min-width: 1440px)"
+                srcset="img/latte-desktop.webp 1x, img/latte-desktop.webp@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/latte-tablet.webp 1x, img/latte-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/latte-mobile.webp 1x, img/latte-mobile@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="img/latte-desktop.png 1x, img/latte-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/latte-tablet.png 1x, img/latte-tablet@2x.png 2x">
+              <img class="product__img" src="img/latte-mobile.png" srcset="img/latte-mobile@2x.png 2x" loading="lazy"
+                width="280" height="280" alt="Латте лавандовый">
+            </picture>
+            <div class="product__content">
+              <span class="product__new">новинка!</span>
+              <h1 class="product__title">Лавандовый Латте</h1>
+              <p class="product__text">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым
+                сиропом унесёт вас прямо на вершину Радужных гор</p>
+              <p class="product__order">
+                <span>
+                  <del>285₽</del>
+                  <b>265₽</b>
+                </span>
+                <button class="button button--order">
+                  Заказать</button>
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide product__item product__item--three">
+            <picture class="product__picture">
+              <source type="image/webp" media="(min-width: 1440px)"
+                srcset="img/espresso-desktop.webp 1x, img/espresso-desktop.webp@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/espresso-tablet.webp 1x, img/espresso-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/espresso-mobile.webp 1x, img/espresso-mobile@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="img/espresso-desktop.png 1x, img/espresso-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/espresso-tablet.png 1x, img/espresso-tablet@2x.png 2x">
+              <img class="product__img" src="img/espresso-mobile.png" srcset="img/espresso-mobile@2x.png 2x"
+                loading="lazy" width="280" height="280" alt="Кофе Еспрессо">
+            </picture>
+            <div class="product__content">
+              <span class="product__new">новинка!</span>
+              <h1 class="product__title">Тройной Эспрессо</h1>
+              <p class="product__text">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из
+                Колумбии покажет вам, что такое настоящая бодрость</p>
+              <p class="product__order">
+                <span>
+                  <del>395₽</del>
+                  <b>375₽</b>
+                </span>
+                <button class="button button--order">
+                  Заказать</button>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination product__down-buttons">
+          <span class="product__down-button"></span>
+          <span class="product__down-button"></span>
+          <span class="product__down-button"></span>
+        </div>
+
+        <!-- If we need navigation buttons -->
+        <div class="product__button product__button--left">
+          <svg width="11" height="20" aria-label="Кнопка следующий">
             <use xlink:href="img/sprite.svg#icon-slider"></use>
-          </svg></button>
-
-        <span class="product__new">новинка!</span>
-        <h1 class="product__title">Декаф Флэт Уайт</h1>
-
-        <p class="product__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком —
-          то, что
-          нужно для расслабления после тяжёлого рабочего дня</p>
-
-        <p class="product__order">
-          <span>
-            <del>295₽</del>
-            <b>225₽</b>
-          </span>
-          <button class="button button--order">
-            Заказать</button>
-        </p>
-
-        <button class="product__button product__button--right">
-          <svg width="11" height="20" aria-label="Кнопка следующий слайд">
+          </svg>
+        </div>
+        <div class="product__button product__button--right">
+          <svg width="11" height="20" aria-label="Кнопка следующий">
             <use xlink:href="img/sprite.svg#icon-slider"></use>
-          </svg></button>
-
-        <div class="product__down-buttons">
-          <button class="product__down-button product__down-button--active">
-            <span class="visually-hidden">нижний слайд</span>
-          </button>
-          <button class="product__down-button">
-            <span class="visually-hidden">нижний слайд</span>
-          </button>
-          <button class="product__down-button">
-            <span class="visually-hidden">нижний слайд</span>
-          </button>
+          </svg>
         </div>
 
       </div>
+
     </section>
 
     <section class="benefit">
@@ -370,7 +441,7 @@
     </section>
 
     <section class="map">
-      <img src="img/map-plug.png" width="320" height="420" alt="Заглушка карты">
+      <img class="map__img" src="img/map-plug.png" width="320" height="420" alt="Заглушка карты">
     </section>
 
   </main>
@@ -380,8 +451,13 @@
 
       <div class="footer__nav">
         <a href="#" class="footer__logo">
-          <img class="footer__img" src="img/logo-medium.svg" width="82" height="36" alt="Логотип бренда">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/logo-full.svg">
+            <img class="footer__img" src="img/logo-mobile.svg" width="32" height="36" alt="Логотип в контактов">
+          </picture>
         </a>
+
+        <span class="footer__promo-text">Интернет-магазин кофейных напитков</span>
 
         <ul class="footer__icons">
           <li class="footer__icons-item">
@@ -446,7 +522,7 @@
         <ul class="footer__list">
           <li class="footer__item footer__item--pin">
             <img class="footer__item-logo" src="img/icon-address.svg" width="13" height="16" alt="Логотип локации">
-            Санкт-Петербург, набережная<br>реки Карповки, дом 5
+            Санкт-Петербург, набережная<br> реки Карповки, дом 5
           </li>
           <li class="footer__item footer__item--tel">
             <a class="footer__link" href="tel:+79999999999"><img class="footer__item-logo" src="img/icon-phone.svg"
@@ -470,6 +546,7 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="./js/script.js" type="module"></script>
 </body>
 
