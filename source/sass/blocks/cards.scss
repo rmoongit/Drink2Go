@@ -31,6 +31,12 @@
   padding: 40px 20px 20px;
   margin-bottom: 20px;
 
+  &:hover {
+    box-shadow: 0 5px 15px $box-shadow;
+    transform: scale(1.1);
+    transition: all ease-in-out 0.3s;
+  }
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -51,10 +57,10 @@
   margin-bottom: 24px;
 }
 
-.cards__sort-wrapper {
+.cards__drop {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  column-gap: 8px;
   margin-bottom: 20px;
 
   @media (min-width: $tablet) {
@@ -62,23 +68,28 @@
   }
 }
 
-.cards__suptitle {
+.cards__drop-text {
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  margin-right: 8px;
 }
 
-.cards__title {
+.cards__title-link {
+  display: block;
   text-align: start;
-  font-family: $main-font-bold;
-  font-size: 18px;
-  line-height: 32px;
-  margin: 0;
-  margin-bottom: 4px;
+  text-decoration: none;
+  color: $black;
 
-  @media (min-width: $tablet) {
-    @include mobile-benefits-title();
+  .cards__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 32px;
+    margin: 0;
+    margin-bottom: 4px;
+
+    @media (min-width: $tablet) {
+      @include mobile-benefits-title();
+    }
   }
 }
 
@@ -87,6 +98,10 @@
   text-align: start;
   margin: 0;
   margin-bottom: 16px;
+
+  @media (min-width: $desktop) {
+    padding-right: 11px;
+  }
 }
 
 .cards__price {
@@ -135,7 +150,11 @@
 }
 
 .cards__button-numb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  text-decoration: none;
   border-radius: 4px;
   background-color: $white;
   color: $base-purple;

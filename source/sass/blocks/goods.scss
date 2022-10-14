@@ -23,7 +23,7 @@
   color: $base-purple;
   font-size: 12px;
   line-height: 16px;
-  font-family: $main-font-bold;
+  font-weight: 700;
 
   @media (min-width: $desktop) {
     grid-column: 2/-1;
@@ -32,12 +32,15 @@
 
 .goods__title {
   @include mobile-benefits-title();
-
   margin: 0;
   margin-bottom: 20px;
 
-  @media (min-width: $desktop) {
+  @media (min-width: $tablet) {
     @include tablet-benefits-title();
+  }
+
+  @media (min-width: $desktop) {
     grid-column: 2/-1;
+    text-align: start;
   }
 }

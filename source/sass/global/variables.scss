@@ -14,6 +14,7 @@ $pink-opacity: rgba(120, 89, 207, 0.25);
 $purple-lighter: #9070ec;
 $purple-darker: #593cac;
 $light-grey: #e2e2e2;
+$box-shadow: rgba(0, 0, 0, 0.15);
 
 /* background-colors */
 
@@ -22,11 +23,10 @@ $flat-white: #f3ebe1;
 $lavander-latte: #eae6fc;
 $espresso: #e5e6e8;
 $button-slider-gradient: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+$button-slider-hover: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
 
 /* main font */
-$main-font: "Montserrat-Regular", "Tahoma", sans-serif;
-$main-font-bold: "Montserrat-Bold", "Tahoma", sans-serif;
-$main-font-medium: "Montserrat-Medium", "Tahoma", sans-serif;
+$main-font: "Montserrat", "Tahoma", sans-serif;
 
 /* media resize */
 

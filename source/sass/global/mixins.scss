@@ -1,13 +1,10 @@
 /* Миксины */
 
-
 /* fonts */
-
 @mixin mobile-title() {
   line-height: 47px;
   font-size: 36px;
   font-weight: 700;
-  font-family: $main-font-bold;
 }
 
 @mixin tablet-title() {
@@ -27,7 +24,6 @@
   line-height: 36px;
   font-size: 24px;
   font-weight: 700;
-  font-family: $main-font-bold;
 }
 
 @mixin tablet-benefits-title() {

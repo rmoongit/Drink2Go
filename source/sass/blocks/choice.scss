@@ -18,6 +18,7 @@
   position: relative;
   margin-bottom: 23px;
   margin-left: 34px;
+  cursor: pointer;
 
   .choice__item-select::before {
     position: absolute;
@@ -45,11 +46,8 @@
   }
 
   input[type="radio"]:hover + .choice__item-select::before {
-    background-color: $base-pink;
-  }
-
-  input[type="radio"]:hover + .choice__item-select::before {
     border-color: $base-purple;
+    background-color: $base-pink;
   }
 
   input[type="radio"]:checked + .choice__item-select::before {

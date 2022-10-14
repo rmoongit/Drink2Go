@@ -1,17 +1,19 @@
 .product {
-  position: relative;
-  min-height: 656px;
-  background-color: $white;
+  background-color: $flat-white;
 
   @media (min-width: $desktop) {
     background: $flat-white;
   }
 }
 
+.product__wrapper {
+  position: relative;
+}
+
 .product__item {
   display: grid;
   min-height: 670px;
-  justify-content: center;
+  justify-items: center;
   background-color: $flat-white;
   padding: 20px 20px 60px;
 
@@ -24,7 +26,7 @@
   }
 
   @media (min-width: $tablet) {
-    padding: 60px 20px 0;
+    padding-top: 60px;
     min-height: 828px;
     background: linear-gradient(180deg, $flat-white 70%, $white 70%);
 
@@ -38,6 +40,8 @@
   }
 
   @media (min-width: $desktop) {
+    min-height: 714px;
+    padding-top: 0;
     display: flex;
     column-gap: 30px;
     align-items: center;
@@ -87,7 +91,7 @@
 }
 
 .product__new {
-  font-family: $main-font-bold;
+  font-weight: 700;
   display: inline-block;
   color: $base-purple;
   text-transform: uppercase;
@@ -95,7 +99,6 @@
 
   @media (min-width: $desktop) {
     grid-column: 2/2;
-    grid-row: 1;
   }
 }
 
@@ -110,7 +113,6 @@
   }
 
   @media (min-width: $desktop) {
-    grid-row: 2;
     grid-column: 2/2;
   }
 }
@@ -133,11 +135,11 @@
 }
 
 .product__order {
-  margin: 0;
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
-  row-gap: 10px;
-  justify-content: center;
+  margin: 0;
+  column-gap: 20px;
 
   del {
     color: $base-purple;
@@ -147,13 +149,12 @@
 
   b {
     font-size: 20px;
-    font-family: $main-font-bold;
+    font-weight: 700;
     line-height: 32px;
   }
 
   @media (min-width: $desktop) {
     grid-column: 2;
-    margin-bottom: 158px;
   }
 }
 
@@ -172,7 +173,7 @@
 
   &:hover,
   &:focus {
-    background-color: $white;
+    background: $button-slider-hover;
   }
 
   &:active {
@@ -200,35 +201,31 @@
 
   @media (min-width: $desktop) {
     height: 100%;
-    width: 80px;
   }
 }
 
-.product__down-buttons {
+.product__pagination {
   display: none;
+
+  .swiper-pagination-bullet {
+    border: none;
+    background-color: $white;
+    height: 4px;
+    width: 62px;
+    border-radius: 0;
+
+    &:hover,
+    &:focus {
+      background-color: $pink-opacity;
+    }
+  }
 
   @media (min-width: $desktop) {
     display: block;
     margin-bottom: 60px;
   }
 
-  .product__down-button {
-    cursor: pointer;
-
-    @media (min-width: $desktop) {
-      border: none;
-      background-color: $white;
-      height: 4px;
-      width: 62px;
-
-      &--active {
-        background-color: $base-purple;
-      }
-
-      &:hover,
-      &:focus {
-        background-color: $base-pink;
-      }
-    }
+  .swiper-pagination-bullet-active {
+    background-color: $base-purple;
   }
 }

@@ -9,7 +9,7 @@ import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
-import {deleteAsync} from 'del';
+import { deleteAsync } from 'del';
 import browser from 'browser-sync';
 
 // Styles
@@ -91,6 +91,7 @@ const copy = (done) => {
     'source/fonts/**/*.{woff2,woff}',
     'source/*.ico',
     'source/*.webmanifest',
+    'source/leaflet/**/*.{css,js}',
   ], {
     base: 'source'
   })

@@ -28,7 +28,7 @@
 .benefit__suptitle {
   display: inline-block;
   text-transform: uppercase;
-  font-family: $main-font-bold;
+  font-weight: 700;
   color: $base-purple;
   font-size: 12px;
   line-height: 16px;
@@ -52,8 +52,13 @@
   @media (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
     row-gap: 50px;
+  }
+
+  @media (min-width: $desktop) {
+    align-items: baseline;
   }
 }
 
@@ -67,6 +72,8 @@
     grid-template-columns: 52px 267px;
     grid-template-rows: 56px auto;
     justify-items: start;
+    font-size: 16px;
+    line-height: 24px;
     width: 339px;
     min-height: 94px;
     margin-bottom: 0;
@@ -75,8 +82,12 @@
   @media (min-width: $desktop) {
     display: block;
     width: 318px;
-    min-height: 170px;
+    min-height: 194px;
     text-align: center;
+
+    br {
+      display: block;
+    }
   }
 }
 
@@ -93,13 +104,14 @@
 }
 
 .benefit__item-title {
-  font-family: $main-font-bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 32px;
   margin: 0;
   margin-bottom: 4px;
 
   @media (min-width: $tablet) {
+    @include mobile-benefits-title();
     grid-row: 1;
   }
 
@@ -115,7 +127,11 @@
     text-align: start;
     grid-column: 2;
     grid-row: 2;
-    padding-right: 32px;
+    padding-right: 10px;
+
+    br {
+      display: none;
+    }
   }
 
   @media (min-width: $desktop) {

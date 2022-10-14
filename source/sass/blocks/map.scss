@@ -12,5 +12,20 @@
 }
 
 .map__img {
+  display: none;
   width: 100%;
+}
+
+.map__item {
+  position: relative;
+  width: 100%;
+  min-height: 420px;
+
+  @media (min-width: $tablet) {
+    min-height: 480px;
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 540px;
+  }
 }

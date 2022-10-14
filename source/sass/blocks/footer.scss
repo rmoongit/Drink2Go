@@ -70,6 +70,7 @@
   @include clear-list();
   display: flex;
   flex-wrap: wrap;
+  column-gap: 20px;
 }
 
 .footer__link-icon {
@@ -100,7 +101,7 @@
 
 .footer__suptitle {
   display: inline-block;
-  font-family: $main-font-bold;
+  font-weight: 700;
   color: $base-purple;
 }
 
@@ -157,7 +158,7 @@
 .footer__link {
   color: $black;
   text-decoration: none;
-  font-family: $main-font-medium;
+  font-weight: 500;
   margin-bottom: 20px;
   font-size: 12px;
   line-height: 16px;

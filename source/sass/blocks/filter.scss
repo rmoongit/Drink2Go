@@ -8,6 +8,7 @@
   position: relative;
   margin-bottom: 23px;
   margin-left: 44px;
+  cursor: pointer;
 
   .filter__item-select::before {
     content: "";
@@ -33,13 +34,10 @@
     transform: translate(-50%, -50%);
   }
 
-  input[type="checkbox"]:hover + .filter__item-select::before {
+  input[type="checkbox"]:hover + .filter__item-select::before,
+  input[type="checkbox"]:focus + .filter__item-select::before {
     border: 2px solid $base-purple;
     background-color: $base-pink;
-  }
-
-  input[type="checkbox"]:checked + .filter__item-select::after {
-    left: -20px;
   }
 
   input[type="checkbox"]:checked + .filter__item-select::after {
