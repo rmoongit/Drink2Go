@@ -1,0 +1,1 @@
+const navMenu=()=>{const e=document.querySelector(".header__users-button"),t=document.querySelector(".header__nav");e.addEventListener("click",(()=>{e.classList.toggle("header__users-button--open"),t.classList.toggle("header__nav--open")}))};export{navMenu};
