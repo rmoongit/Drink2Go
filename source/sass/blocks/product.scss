@@ -45,6 +45,7 @@
     display: flex;
     column-gap: 30px;
     align-items: center;
+    justify-content: center;
     background: linear-gradient(180deg, $flat-white 100%, $white 0%);
 
     &--two {

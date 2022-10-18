@@ -1,6 +1,6 @@
 /* в этот файл добавляет скрипты*/
-import { navMenu } from "./burger.js";
-import { showContent } from "./select.js";
+import { navMenu } from './burger.js';
+import { showContent } from './select.js';
 
 const buttonNoJs = document.querySelector('.no-js--button');
 const navNoJs = document.querySelector('.no-js--nav');
